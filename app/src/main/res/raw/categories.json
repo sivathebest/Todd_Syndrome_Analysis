@@ -1,0 +1,44 @@
+[
+   {
+    "name": "Todd's Syndrome Analysis",
+    "id": "science",
+    "theme": "green",
+    "quizzes": [
+      {
+        "type": "single-select-item",
+        "question": "Do you have migraine issues (currently or in the past)?",
+        "options": [
+          "Yes",
+          "No"
+        ],
+        "answer": [0]
+      },
+      {
+        "type": "true-false",
+        "question": "Are you 15 years old or below?",
+        "answer": true
+      },
+      {
+        "type": "single-select-item",
+        "question": "Please specify your gender",
+        "options": [
+          "Male",
+          "Female"
+        ],
+        "answer": [0]
+      },
+      {
+        "type": "true-false",
+        "question": "Have you ever used or currently using hallucinogenic drugs?",
+        "answer": true
+      }
+    ],
+    "scores": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "solved": "false"
+  }
+]
