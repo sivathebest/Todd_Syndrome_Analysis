@@ -5,3 +5,4 @@ Todd Syndrome analysis is a test that contain hypothetical questions. After the 
 
 ##Modules:##
 ####1. Login with avatar.####
+Login module has two fields. 
