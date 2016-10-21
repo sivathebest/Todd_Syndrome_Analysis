@@ -6,3 +6,5 @@ Todd Syndrome analysis is a test that contain hypothetical questions. After the 
 ##Modules:##
 ####1. Login with avatar.####
 Login module has two fields. Those are First name and Last Initial. After that, There are sixteen avator available to choose according to your personal character. 
+
+####2. Test Category.####
