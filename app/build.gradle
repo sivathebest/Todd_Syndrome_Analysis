@@ -16,8 +16,24 @@
 
 apply plugin: 'com.android.application'
 
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
 android {
-    buildToolsVersion "23.0.3"
+    buildToolsVersion '25.0.0'
     compileSdkVersion 23
 
     dataBinding {

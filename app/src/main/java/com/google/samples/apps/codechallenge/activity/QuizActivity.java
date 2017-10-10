@@ -57,7 +57,7 @@ public class QuizActivity extends AppCompatActivity {
     private Category mCategory;
     private QuizFragment mQuizFragment;
     private FloatingActionButton mQuizFab;
-    private boolean mSavedStateIsPlaying;
+    private boolean savedStateIsPlaying;
     private ImageView mIcon;
     private Animator mCircularReveal;
     private ObjectAnimator mColorChange;
@@ -101,7 +101,7 @@ public class QuizActivity extends AppCompatActivity {
         String categoryId = getIntent().getStringExtra(Category.TAG);
         mInterpolator = new FastOutSlowInInterpolator();
         if (null != savedInstanceState) {
-            mSavedStateIsPlaying = savedInstanceState.getBoolean(STATE_IS_PLAYING);
+            savedStateIsPlaying = savedInstanceState.getBoolean(STATE_IS_PLAYING);
         }
         super.onCreate(savedInstanceState);
         populate(categoryId);
@@ -141,7 +141,7 @@ public class QuizActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        if (mSavedStateIsPlaying) {
+        if (savedStateIsPlaying) {
             mQuizFragment = (QuizFragment) getSupportFragmentManager().findFragmentByTag(
                     FRAGMENT_TAG);
             if (!mQuizFragment.hasSolvedStateListener()) {
@@ -406,7 +406,7 @@ public class QuizActivity extends AppCompatActivity {
                 .start();
         mQuizFab = (FloatingActionButton) findViewById(R.id.fab_quiz);
         mQuizFab.setImageResource(R.drawable.ic_play);
-        if (mSavedStateIsPlaying) {
+        if (savedStateIsPlaying) {
             mQuizFab.hide();
         } else {
             mQuizFab.show();
@@ -421,7 +421,7 @@ public class QuizActivity extends AppCompatActivity {
         titleView.setText(category.getName());
         titleView.setTextColor(ContextCompat.getColor(this,
                 category.getTheme().getTextPrimaryColor()));
-        if (mSavedStateIsPlaying) {
+        if (savedStateIsPlaying) {
             // the toolbar should not have more elevation than the content while playing
             setToolbarElevation(false);
         }
